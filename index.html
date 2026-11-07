@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LE PARCOURS / Nandja TANTE-NAKPANE</title>
+<meta name="description" content="Un voyage au scroll dans le parcours de Nandja TANTE-NAKPANE, développeur créatif au Togo. Quatre niveaux, quatre portails, des projets réels.">
+<meta name="theme-color" content="#0B1020">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B1020'/%3E%3Crect x='5' y='5' width='22' height='22' fill='none' stroke='%235C94FC' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="scanlines" aria-hidden="true"></div>
+<div id="flash" aria-hidden="true"></div>
+
+<header class="hud">
+  <div class="hud-world">
+    <span class="dot" aria-hidden="true"></span>
+    <span id="world">MONDE 1</span>
+  </div>
+  <div class="hud-bar" aria-hidden="true"><div id="bar-fill"></div></div>
+  <div class="hud-right">
+    <span id="level">NIVEAU 1</span>
+    <a class="hud-link" href="https://github.com/arthurdevcod02" target="_blank" rel="noopener">GITHUB</a>
+  </div>
+</header>
+
+<main id="journey" aria-label="Parcours en quatre niveaux">
+
+  <section class="level is-active" data-name="PROFIL" data-accent="#5C94FC" aria-label="Niveau 1, profil" aria-hidden="false">
+    <div class="panel">
+      <p class="kicker" data-reveal>MONDE 1 <span>/</span> PROFIL</p>
+      <h1 data-reveal>NANDJA<br>TANTE-NAKPANE</h1>
+      <p class="role" data-reveal>DÉVELOPPEUR CRÉATIF / LOMÉ, TOGO</p>
+      <p class="lead" data-reveal>Je construis des applications web et mobiles, du premier écran à la mise en ligne. Java, JavaScript, Dart et Flutter servent une seule idée : des interfaces claires, rapides et vivantes.</p>
+      <div class="stats" data-reveal>
+        <div class="stat"><strong>04</strong><span>PROJETS</span></div>
+        <div class="stat"><strong>04</strong><span>LANGAGES</span></div>
+        <div class="stat"><strong>02</strong><span>DÉPÔTS PUBLICS</span></div>
+        <div class="stat"><strong>2026</strong><span>PREMIER NIVEAU</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="level" data-name="PROJETS" data-accent="#E52521" aria-label="Niveau 2, projets" aria-hidden="true">
+    <div class="panel">
+      <p class="kicker" data-reveal>MONDE 2 <span>/</span> PROJETS</p>
+      <h2 data-reveal>QUATRE QUÊTES</h2>
+      <p class="lead" data-reveal>Deux projets publics, deux projets privés. Chaque quête a son terrain et ses outils.</p>
+
+      <div class="quests">
+        <a class="quest" href="https://github.com/arthurdevcod02/eventis" target="_blank" rel="noopener" data-reveal>
+          <span class="quest-id">01</span>
+          <span class="quest-body">
+            <span class="quest-name">EVENTIS</span>
+            <span class="quest-desc">Plateforme événementielle au Togo</span>
+          </span>
+          <span class="quest-meta">
+            <span class="tag">JAVASCRIPT</span>
+            <span class="state state--public">PUBLIC</span>
+          </span>
+        </a>
+
+        <a class="quest" href="https://github.com/arthurdevcod02/free-spirit" target="_blank" rel="noopener" data-reveal>
+          <span class="quest-id">02</span>
+          <span class="quest-body">
+            <span class="quest-name">FREE SPIRIT</span>
+            <span class="quest-desc">E-commerce streetwear immersif</span>
+          </span>
+          <span class="quest-meta">
+            <span class="tag">HTML / CSS / JS</span>
+            <span class="state state--public">PUBLIC</span>
+          </span>
+        </a>
+
+        <div class="quest quest--locked" data-reveal>
+          <span class="quest-id">03</span>
+          <span class="quest-body">
+            <span class="quest-name">AHOEPAY</span>
+            <span class="quest-desc">Loyers et charges d'une concession</span>
+          </span>
+          <span class="quest-meta">
+            <span class="tag">FLUTTER / DART</span>
+            <span class="state state--private">PRIVÉ</span>
+          </span>
+        </div>
+
+        <div class="quest quest--locked" data-reveal>
+          <span class="quest-id">04</span>
+          <span class="quest-body">
+            <span class="quest-name">NOVA LAB</span>
+            <span class="quest-desc">Vitrine d'un studio digital et gaming</span>
+          </span>
+          <span class="quest-meta">
+            <span class="tag">HTML / CSS</span>
+            <span class="state state--private">PRIVÉ</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="level" data-name="STACK" data-accent="#00A800" aria-label="Niveau 3, outils" aria-hidden="true">
+    <div class="panel">
+      <p class="kicker" data-reveal>MONDE 3 <span>/</span> STACK</p>
+      <h2 data-reveal>ÉQUIPEMENT</h2>
+      <p class="lead" data-reveal>Un sac léger, choisi pour livrer vite sans sacrifier la qualité.</p>
+
+      <div class="gear" data-reveal>
+        <p class="gear-label">LANGAGES</p>
+        <ul class="chips">
+          <li class="chip">JAVA</li>
+          <li class="chip">JAVASCRIPT</li>
+          <li class="chip">DART</li>
+          <li class="chip">HTML5</li>
+          <li class="chip">CSS3</li>
+        </ul>
+      </div>
+
+      <div class="gear" data-reveal>
+        <p class="gear-label">FRAMEWORKS ET OUTILS</p>
+        <ul class="chips">
+          <li class="chip">BOOTSTRAP</li>
+          <li class="chip">FLUTTER</li>
+          <li class="chip">GIT</li>
+          <li class="chip">GITHUB</li>
+          <li class="chip">VS CODE</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="level" data-name="FIN" data-accent="#7C3AED" aria-label="Niveau 4, fin du parcours" aria-hidden="true">
+    <div class="panel">
+      <p class="kicker" data-reveal>MONDE 4 <span>/</span> FIN</p>
+      <h2 data-reveal>FIN DU<br>PARCOURS</h2>
+      <p class="lead" data-reveal>Merci d'être passé. Le prochain niveau vous attend.</p>
+      <div class="actions" data-reveal>
+        <a class="btn btn--primary" href="https://github.com/arthurdevcod02" target="_blank" rel="noopener">PROFIL GITHUB</a>
+        <button class="btn" type="button" data-replay>REVENIR AU DÉBUT</button>
+      </div>
+      <p class="note" data-reveal>Nandja TANTE-NAKPANE · Développeur créatif · Togo</p>
+    </div>
+  </section>
+
+</main>
+
+<div id="transition" aria-hidden="true">
+  <div class="transition-ring"></div>
+  <div class="transition-copy">
+    <p id="transition-world">MONDE 2</p>
+    <h2 id="transition-name">PROJETS</h2>
+  </div>
+</div>
+
+<p id="hint">SCROLLEZ POUR TRAVERSER LE PORTAIL <span class="hint-arrow" aria-hidden="true"></span></p>
+<button id="replay" type="button" data-replay>REJOUER</button>
+
+<div id="loader" role="status" aria-live="polite">
+  <div class="loader-box">
+    <p class="loader-title">LE PARCOURS</p>
+    <p class="loader-text">CHARGEMENT DU NIVEAU 1...</p>
+    <div class="loader-track" aria-hidden="true"><span></span></div>
+  </div>
+</div>
+
+<noscript>
+  <style>
+    #scene, .scanlines, #flash, #hint, #replay, #transition, #loader, .hud { display: none !important; }
+    body { background: #0B1020; }
+    #journey { height: auto; padding: 32px 16px; display: grid; gap: 24px; }
+    .level { position: static !important; transform: none !important; opacity: 1 !important; visibility: visible !important; width: 100% !important; max-width: 760px; margin: 0 auto; }
+    .panel { box-shadow: 8px 8px 0 rgba(10, 10, 10, .5); }
+  </style>
+</noscript>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
